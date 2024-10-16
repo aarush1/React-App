@@ -26,9 +26,12 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run build
+    - name: Run build with status check
       run: |
-        set -e
-        npm run build
+          npm run build
+          if [ $? -ne 0 ]; then
+            echo "The build step failed!"
+            exit 1
+          fi
 
 
