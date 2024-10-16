@@ -32,5 +32,3 @@ jobs:
         npm run build
 
 
-    - name: Run tests
-      run: npm test  # Remove this step if you don’t have tests yet
